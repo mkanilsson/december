@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "december:block/modern_structure_top",
+    "side": "december:block/modern_structure"
+  }
+}
