@@ -12,6 +12,7 @@ import java.util.function.Function;
 
 public class ModItems {
     public static final Item MODERN_UNIT = register("modern_unit", Item::new, new Item.Settings());
+    public static final Item ENDERITE_INGOT = register("enderite_ingot", Item::new, new Item.Settings());
 
     public static Item register(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
         RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(December.MOD_ID, name));
@@ -22,6 +23,9 @@ public class ModItems {
     public static void registerModItems() {
         December.LOGGER.info("Registering mod items");
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(MODERN_UNIT));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.add(MODERN_UNIT);
+            entries.add(ENDERITE_INGOT);
+        });
     }
 }

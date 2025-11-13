@@ -1,6 +1,8 @@
 // 1.21.10	-999999999-01-01T00:00:00	december/DecemberModModelProvider
 1608ce176f45130a0a0ec2e596d96b6d6ce9ba2f assets/december/blockstates/modern_structure.json
+b01cb9e2fb59b78c8847467a638625982f048647 assets/december/items/enderite_ingot.json
 b76cad702b33b0385eddab44bd981569f217aa8b assets/december/items/modern_structure.json
 379142e31fbc1c768b9ca97982fc13ff3d32bf48 assets/december/items/modern_unit.json
 4104dcd125eadc13120e3c07fbf8f8d9c9e4968d assets/december/models/block/modern_structure.json
+d3d18a01fea2ff16a4534e2dbec17fa110ec5dce assets/december/models/item/enderite_ingot.json
 b969f6b43cc233abe9cd3a6119dd8a429f1a7dec assets/december/models/item/modern_unit.json
