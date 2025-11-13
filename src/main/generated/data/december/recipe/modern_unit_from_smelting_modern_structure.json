@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 500,
+  "experience": 1.0,
+  "group": "modern_structure_to_modern_unit",
+  "ingredient": "december:modern_structure",
+  "result": {
+    "id": "december:modern_unit"
+  }
+}

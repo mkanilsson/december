@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_modern_structure": {
+      "conditions": {
+        "items": [
+          {
+            "items": "december:modern_structure"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "december:modern_unit_from_smelting_modern_structure"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_modern_structure"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "december:modern_unit_from_smelting_modern_structure"
+    ]
+  }
+}
