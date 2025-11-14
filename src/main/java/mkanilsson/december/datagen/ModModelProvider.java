@@ -25,6 +25,12 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.MODERN_UNIT, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENDERITE_INGOT, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.ENDERITE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ENDERITE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ENDERITE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ENDERITE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ENDERITE_HOE, Models.HANDHELD);
     }
 
     @Override
