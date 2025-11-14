@@ -80,6 +80,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.ENDERITE_INGOT),
                                 conditionsFromItem(ModItems.ENDERITE_INGOT))
                         .offerTo(exporter);
+
+                createShaped(RecipeCategory.COMBAT, ModItems.ENDERITE_HELMET)
+                        .pattern("III")
+                        .pattern("I I")
+                        .input('I', ModItems.ENDERITE_INGOT)
+                        .criterion(hasItem(ModItems.ENDERITE_INGOT),
+                                conditionsFromItem(ModItems.ENDERITE_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.COMBAT, ModItems.ENDERITE_CHESTPLATE)
+                        .pattern("I I")
+                        .pattern("III")
+                        .pattern("III")
+                        .input('I', ModItems.ENDERITE_INGOT)
+                        .criterion(hasItem(ModItems.ENDERITE_INGOT),
+                                conditionsFromItem(ModItems.ENDERITE_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.COMBAT, ModItems.ENDERITE_LEGGINGS)
+                        .pattern("III")
+                        .pattern("I I")
+                        .pattern("I I")
+                        .input('I', ModItems.ENDERITE_INGOT)
+                        .criterion(hasItem(ModItems.ENDERITE_INGOT),
+                                conditionsFromItem(ModItems.ENDERITE_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.COMBAT, ModItems.ENDERITE_BOOTS)
+                        .pattern("I I")
+                        .pattern("I I")
+                        .input('I', ModItems.ENDERITE_INGOT)
+                        .criterion(hasItem(ModItems.ENDERITE_INGOT),
+                                conditionsFromItem(ModItems.ENDERITE_INGOT))
+                        .offerTo(exporter);
             }
         };
     }
