@@ -31,6 +31,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ENDERITE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ENDERITE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ENDERITE_HOE, Models.HANDHELD);
+
+        itemModelGenerator.registerArmor(ModItems.ENDERITE_HELMET, ModItems.ENDERITE_ARMOR_MATERIAL_KEY,
+                ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.ENDERITE_CHESTPLATE, ModItems.ENDERITE_ARMOR_MATERIAL_KEY,
+                ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.ENDERITE_LEGGINGS, ModItems.ENDERITE_ARMOR_MATERIAL_KEY,
+                ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.ENDERITE_BOOTS, ModItems.ENDERITE_ARMOR_MATERIAL_KEY,
+                ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
     }
 
     @Override
