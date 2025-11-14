@@ -48,7 +48,7 @@ public class ModItems {
     public static final Item ENDERITE_HOE = register("enderite_hoe", Item::new,
             new Item.Settings().hoe(ENDERITE_TOOL_MATERIAL, 1f, 1f));
 
-    public static final int BASE_DURABILITY = 15;
+    public static final int BASE_DURABILITY = 49;
     public static final RegistryKey<EquipmentAsset> ENDERITE_ARMOR_MATERIAL_KEY = RegistryKey
             .of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(December.MOD_ID, "enderite"));
 
