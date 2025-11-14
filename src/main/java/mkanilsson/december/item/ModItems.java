@@ -36,7 +36,6 @@ public class ModItems {
             22,
             REPAIRS_ENDERITE_THINGS);
 
-    // TODO: Add recipes
     public static final Item ENDERITE_PICKAXE = register("enderite_pickaxe", Item::new,
             new Item.Settings().pickaxe(ENDERITE_TOOL_MATERIAL, 1f, 1f));
     public static final Item ENDERITE_SWORD = register("enderite_sword", Item::new,
