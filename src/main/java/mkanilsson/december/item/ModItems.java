@@ -54,10 +54,11 @@ public class ModItems {
     public static final ArmorMaterial ENDERITE_ARMOR_MATERIAL = new ArmorMaterial(
             BASE_DURABILITY,
             Map.of(
-                    EquipmentType.HELMET, 3,
-                    EquipmentType.CHESTPLATE, 8,
-                    EquipmentType.LEGGINGS, 6,
-                    EquipmentType.BOOTS, 3),
+                    EquipmentType.HELMET, 4,
+                    EquipmentType.CHESTPLATE, 9,
+                    EquipmentType.LEGGINGS, 7,
+                    EquipmentType.BOOTS, 4,
+                    EquipmentType.BODY, 12),
             5,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
             4.0F,
