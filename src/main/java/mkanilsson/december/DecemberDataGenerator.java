@@ -66,11 +66,7 @@ class ModConfiguredFeatures {
         List<Target> endModernStructure = List
                 .of(OreFeatureConfig.createTarget(endReplaceables, ModBlocks.MODERN_STRUCTURE.getDefaultState()));
         context.register(MODERN_STRUCTURE_KEY,
-                new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(endModernStructure, 5, 5.0f /*
-                                                                                                       * TODO: Should
-                                                                                                       * be
-                                                                                                       * 1
-                                                                                                       */)));
+                new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(endModernStructure, 5, 1.0f)));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
