@@ -1,7 +1,11 @@
 package mkanilsson.december;
 
 import net.fabricmc.api.ModInitializer;
-
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
+import net.minecraft.entity.EntityType;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,5 +21,20 @@ public class December implements ModInitializer {
     public void onInitialize() {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        LootTableInjector.initializeLootTableInjector();
+
+		ModWorldGeneration.generateWorldGen();
     }
 }
+
+class LootTableInjector {
+    public static void initializeLootTableInjector() {
+        LootTableEvents.MODIFY.register((lootTableId, builder, source, wrapper) -> {
+            if (EntityType.WARDEN.getLootTableKey().get().equals(lootTableId)) {
+                builder.pool(LootPool.builder().rolls(new ConstantLootNumberProvider(1))
+                        .with(ItemEntry.builder(ModItems.ENDERITE_INGOT)));
+            }
+        });
+    }
+}
+
