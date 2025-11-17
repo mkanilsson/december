@@ -25,5 +25,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ENDERITE_LEGGINGS)
                 .add(ModItems.ENDERITE_BOOTS);
 
+        valueLookupBuilder(ItemTags.SWORDS)
+                .add(ModItems.ENDERITE_SWORD);
+        valueLookupBuilder(ItemTags.PICKAXES)
+                .add(ModItems.ENDERITE_PICKAXE);
+        valueLookupBuilder(ItemTags.SHOVELS)
+                .add(ModItems.ENDERITE_SHOVEL)
+                .add(ModItems.DIRT_SHOVEL);
+        valueLookupBuilder(ItemTags.AXES)
+                .add(ModItems.ENDERITE_AXE);
+        valueLookupBuilder(ItemTags.HOES)
+                .add(ModItems.ENDERITE_HOE);
     }
 }

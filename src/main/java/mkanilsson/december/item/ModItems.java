@@ -56,6 +56,7 @@ public class ModItems {
             0.0f,
             1,
             REPAIRS_ENDERITE_THINGS);
+
     public static final Item DIRT_SHOVEL = register("dirt_shovel", Item::new,
             new Item.Settings().shovel(DIRT_TOOL_MATERIAL, 1f, 1f));
 

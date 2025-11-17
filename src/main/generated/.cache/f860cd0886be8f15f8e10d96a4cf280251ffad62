@@ -1,3 +1,8 @@
 // 1.21.10	-999999999-01-01T00:00:00	december/Tags for minecraft:item
 16201ae5577cfde8aa3c4d76caa6e6e70d18a817 data/december/tags/item/repairs_enderite_things.json
+d59ce5d99437cec9a08e65331aba7b2d88270213 data/minecraft/tags/item/axes.json
+b01cb4bd1d4b0dd67aef30bda52c36785596ab7f data/minecraft/tags/item/hoes.json
+cfb458328bc9c99823c9ebeafd82ed772987c73c data/minecraft/tags/item/pickaxes.json
+fbc12e23a4dfb866cd2028550b0f8bf6729b7df6 data/minecraft/tags/item/shovels.json
+f94157c55b3a5a2bb92e684ad9886e7cb9d7ff8c data/minecraft/tags/item/swords.json
 2f335360e4941ceac5b468288f395df09f772dcd data/minecraft/tags/item/trimmable_armor.json
