@@ -1,10 +1,12 @@
 package mkanilsson.december.item;
 
 import mkanilsson.december.December;
+import mkanilsson.december.entity.ModEntities;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.equipment.EquipmentAsset;
@@ -46,6 +48,16 @@ public class ModItems {
             new Item.Settings().axe(ENDERITE_TOOL_MATERIAL, 1f, 1f));
     public static final Item ENDERITE_HOE = register("enderite_hoe", Item::new,
             new Item.Settings().hoe(ENDERITE_TOOL_MATERIAL, 1f, 1f));
+
+    public static final ToolMaterial DIRT_TOOL_MATERIAL = new ToolMaterial(
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            1,
+            15.0f,
+            0.0f,
+            1,
+            REPAIRS_ENDERITE_THINGS);
+    public static final Item DIRT_SHOVEL = register("dirt_shovel", Item::new,
+            new Item.Settings().shovel(DIRT_TOOL_MATERIAL, 1f, 1f));
 
     public static final int BASE_DURABILITY = 49;
     public static final RegistryKey<EquipmentAsset> ENDERITE_ARMOR_MATERIAL_KEY = RegistryKey
@@ -89,6 +101,11 @@ public class ModItems {
             new Item.Settings().armor(ENDERITE_ARMOR_MATERIAL, EquipmentType.BOOTS)
                     .maxDamage(EquipmentType.BOOTS.getMaxDamage(BASE_DURABILITY)));
 
+    public static final Item BIB_SPAWN_EGG = register(
+            "bib_spawn_egg",
+            SpawnEggItem::new,
+            new Item.Settings().spawnEgg(ModEntities.BIB));
+
     public static Item register(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
         RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(December.MOD_ID, name));
 
@@ -103,11 +120,16 @@ public class ModItems {
             entries.add(ENDERITE_INGOT);
         });
 
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
+            entries.add(BIB_SPAWN_EGG);
+        });
+
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
             entries.add(ENDERITE_PICKAXE);
             entries.add(ENDERITE_AXE);
             entries.add(ENDERITE_HOE);
             entries.add(ENDERITE_SHOVEL);
+            entries.add(DIRT_SHOVEL);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {

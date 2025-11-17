@@ -114,6 +114,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.ENDERITE_INGOT),
                                 conditionsFromItem(ModItems.ENDERITE_INGOT))
                         .offerTo(exporter);
+
+                createShaped(RecipeCategory.TOOLS, ModItems.DIRT_SHOVEL)
+                        .pattern("D")
+                        .pattern("S")
+                        .pattern("S")
+                        .input('D', Items.DIRT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(Items.DIRT),
+                                conditionsFromItem(Items.DIRT))
+                        .offerTo(exporter);
             }
         };
     }

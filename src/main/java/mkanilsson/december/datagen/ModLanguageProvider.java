@@ -33,6 +33,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         add(translationBuilder, ModItems.ENDERITE_BOOTS, "Enderite Boots");
 
         add(translationBuilder, ModBlocks.MODERN_STRUCTURE, "Modern Structure");
+
+        add(translationBuilder, ModItems.DIRT_SHOVEL, "Dirt Shovel");
+
+        add(translationBuilder, ModItems.BIB_SPAWN_EGG, "Bib Spawn Egg");
     }
 
     private void add(TranslationBuilder builder, Item item, String text) {

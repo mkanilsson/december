@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 
 import mkanilsson.december.block.ModBlocks;
 import mkanilsson.december.item.ModItems;
+import mkanilsson.december.entity.ModEntities;
 
 public class December implements ModInitializer {
     public static final String MOD_ID = "december";
@@ -21,9 +22,10 @@ public class December implements ModInitializer {
     public void onInitialize() {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        ModEntities.registerModEntites();
         LootTableInjector.initializeLootTableInjector();
 
-		ModWorldGeneration.generateWorldGen();
+        ModWorldGeneration.generateWorldGen();
     }
 }
 
@@ -35,6 +37,12 @@ class LootTableInjector {
                         .with(ItemEntry.builder(ModItems.ENDERITE_INGOT)));
             }
         });
+
+        LootTableEvents.MODIFY.register((lootTableId, builder, source, wrapper) -> {
+            if (ModEntities.BIB.getLootTableKey().get().equals(lootTableId)) {
+                builder.pool(LootPool.builder().rolls(new ConstantLootNumberProvider(1))
+                        .with(ItemEntry.builder(ModItems.ENDERITE_INGOT)));
+            }
+        });
     }
 }
-

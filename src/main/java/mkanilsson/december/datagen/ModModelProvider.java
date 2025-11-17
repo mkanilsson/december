@@ -8,6 +8,7 @@ import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
 import net.minecraft.client.data.TexturedModel;
+import net.minecraft.entity.mob.SpiderEntity;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -31,6 +32,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ENDERITE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ENDERITE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ENDERITE_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DIRT_SHOVEL, Models.HANDHELD);
 
         itemModelGenerator.registerArmor(ModItems.ENDERITE_HELMET, ModItems.ENDERITE_ARMOR_MATERIAL_KEY,
                 ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
