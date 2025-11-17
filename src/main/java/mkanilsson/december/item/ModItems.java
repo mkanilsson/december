@@ -3,9 +3,12 @@ package mkanilsson.december.item;
 import mkanilsson.december.December;
 import mkanilsson.december.entity.ModEntities;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
+import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.equipment.ArmorMaterial;
@@ -40,14 +43,21 @@ public class ModItems {
 
     public static final Item ENDERITE_PICKAXE = register("enderite_pickaxe", Item::new,
             new Item.Settings().pickaxe(ENDERITE_TOOL_MATERIAL, 1f, 1f));
+
     public static final Item ENDERITE_SWORD = register("enderite_sword", Item::new,
             new Item.Settings().sword(ENDERITE_TOOL_MATERIAL, 1f, 1f));
-    public static final Item ENDERITE_SHOVEL = register("enderite_shovel", Item::new,
-            new Item.Settings().shovel(ENDERITE_TOOL_MATERIAL, 1f, 1f));
-    public static final Item ENDERITE_AXE = register("enderite_axe", Item::new,
-            new Item.Settings().axe(ENDERITE_TOOL_MATERIAL, 1f, 1f));
-    public static final Item ENDERITE_HOE = register("enderite_hoe", Item::new,
-            new Item.Settings().hoe(ENDERITE_TOOL_MATERIAL, 1f, 1f));
+
+    public static final Item ENDERITE_SHOVEL = register("enderite_shovel",
+            settings -> new ShovelItem(ENDERITE_TOOL_MATERIAL, 1f, 1f, settings),
+            new Item.Settings());
+
+    public static final Item ENDERITE_AXE = register("enderite_axe",
+            settings -> new AxeItem(ENDERITE_TOOL_MATERIAL, 1f, 1f, settings),
+            new Item.Settings());
+
+    public static final Item ENDERITE_HOE = register("enderite_hoe",
+            settings -> new HoeItem(ENDERITE_TOOL_MATERIAL, 1f, 1f, settings),
+            new Item.Settings());
 
     public static final ToolMaterial DIRT_TOOL_MATERIAL = new ToolMaterial(
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
@@ -57,8 +67,9 @@ public class ModItems {
             1,
             REPAIRS_ENDERITE_THINGS);
 
-    public static final Item DIRT_SHOVEL = register("dirt_shovel", Item::new,
-            new Item.Settings().shovel(DIRT_TOOL_MATERIAL, 1f, 1f));
+    public static final Item DIRT_SHOVEL = register("dirt_shovel",
+            settings -> new ShovelItem(DIRT_TOOL_MATERIAL, 1f, 1f, settings),
+            new Item.Settings());
 
     public static final int BASE_DURABILITY = 49;
     public static final RegistryKey<EquipmentAsset> ENDERITE_ARMOR_MATERIAL_KEY = RegistryKey
