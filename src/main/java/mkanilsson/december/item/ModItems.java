@@ -118,6 +118,11 @@ public class ModItems {
             SpawnEggItem::new,
             new Item.Settings().spawnEgg(ModEntities.BIB));
 
+    public static final Item HASSE_SPAWN_EGG = register(
+            "hasse_spawn_egg",
+            SpawnEggItem::new,
+            new Item.Settings().spawnEgg(ModEntities.HASSE));
+
     public static Item register(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
         RegistryKey<Item> registryKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(December.MOD_ID, name));
 
@@ -134,6 +139,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {
             entries.add(BIB_SPAWN_EGG);
+            entries.add(HASSE_SPAWN_EGG);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {

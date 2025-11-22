@@ -29,23 +29,65 @@ public class ModEntities {
                     .dimensions(1.4f, 0.9f).eyeHeight(0.65F).passengerAttachments(new float[] { 0.765F })
                     .maxTrackingRange(8).build(BIB_KEY));
 
+    private static final RegistryKey<EntityType<?>> HASSE_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE,
+            Identifier.of(December.MOD_ID, "hasse"));
+
+    public static final EntityType<HasseEntity> HASSE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(December.MOD_ID, "hasse"),
+            EntityType.Builder.create(HasseEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(1.4f, 0.9f).eyeHeight(0.65F).passengerAttachments(new float[] { 0.765F })
+                    .maxTrackingRange(8).build(HASSE_KEY));
+
     public static void registerModEntites() {
         December.LOGGER.info("Registering mod entities");
 
         FabricDefaultAttributeRegistry.register(BIB, BibEntity.createSpiderAttributes());
-        EntityRendererRegistry.register(BIB, CustomSpiderEntityRenderer::new);
+        EntityRendererRegistry.register(BIB, BibEntityRenderer::new);
+
+        FabricDefaultAttributeRegistry.register(HASSE, HasseEntity.createSpiderAttributes());
+        EntityRendererRegistry.register(HASSE, HasseEntityRenderer::new);
     }
 }
 
-class CustomSpiderEntityRenderer<T extends SpiderEntity>
+class BibEntityRenderer<T extends SpiderEntity>
         extends MobEntityRenderer<T, LivingEntityRenderState, SpiderEntityModel> {
     private static final Identifier TEXTURE = Identifier.of(December.MOD_ID, "textures/entity/bib/bib.png");
 
-    public CustomSpiderEntityRenderer(EntityRendererFactory.Context context) {
+    public BibEntityRenderer(EntityRendererFactory.Context context) {
         this(context, EntityModelLayers.SPIDER);
     }
 
-    public CustomSpiderEntityRenderer(EntityRendererFactory.Context ctx, EntityModelLayer layer) {
+    public BibEntityRenderer(EntityRendererFactory.Context ctx, EntityModelLayer layer) {
+        super(ctx, new SpiderEntityModel(ctx.getPart(layer)), 0.8F);
+        this.addFeature(new SpiderEyesFeatureRenderer(this));
+    }
+
+    protected float getLyingPositionRotationDegrees() {
+        return 180.0F;
+    }
+
+    public Identifier getTexture(LivingEntityRenderState state) {
+        return TEXTURE;
+    }
+
+    public LivingEntityRenderState createRenderState() {
+        return new LivingEntityRenderState();
+    }
+
+    public void updateRenderState(T spiderEntity, LivingEntityRenderState livingEntityRenderState, float f) {
+        super.updateRenderState(spiderEntity, livingEntityRenderState, f);
+    }
+}
+
+class HasseEntityRenderer<T extends SpiderEntity>
+        extends MobEntityRenderer<T, LivingEntityRenderState, SpiderEntityModel> {
+    private static final Identifier TEXTURE = Identifier.of(December.MOD_ID, "textures/entity/hasse/hasse.png");
+
+    public HasseEntityRenderer(EntityRendererFactory.Context context) {
+        this(context, EntityModelLayers.SPIDER);
+    }
+
+    public HasseEntityRenderer(EntityRendererFactory.Context ctx, EntityModelLayer layer) {
         super(ctx, new SpiderEntityModel(ctx.getPart(layer)), 0.8F);
         this.addFeature(new SpiderEyesFeatureRenderer(this));
     }

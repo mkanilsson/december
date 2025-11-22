@@ -37,6 +37,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         add(translationBuilder, ModItems.DIRT_SHOVEL, "Dirt Shovel");
 
         add(translationBuilder, ModItems.BIB_SPAWN_EGG, "Bib Spawn Egg");
+        add(translationBuilder, ModItems.HASSE_SPAWN_EGG, "Hasse Spawn Egg");
     }
 
     private void add(TranslationBuilder builder, Item item, String text) {
