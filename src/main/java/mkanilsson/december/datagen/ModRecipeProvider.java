@@ -149,9 +149,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.PRESSED_MODERN_UNIT)
-                        .pattern("MMM")
-                        .pattern("MMM")
-                        .pattern("MMM")
+                        .pattern("MM")
+                        .pattern("MM")
                         .input('M', ModItems.MODERN_UNIT)
                         .criterion(hasItem(ModItems.MODERN_UNIT),
                                 conditionsFromItem(ModItems.MODERN_UNIT))

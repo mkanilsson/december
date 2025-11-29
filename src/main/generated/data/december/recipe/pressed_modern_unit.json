@@ -5,9 +5,8 @@
     "M": "december:modern_unit"
   },
   "pattern": [
-    "MMM",
-    "MMM",
-    "MMM"
+    "MM",
+    "MM"
   ],
   "result": {
     "count": 1,
