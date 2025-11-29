@@ -5,6 +5,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.feature.SpiderEyesFeatureRenderer;
@@ -46,11 +47,13 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(BIB, BibEntity.createSpiderAttributes());
         FabricDefaultAttributeRegistry.register(HASSE, HasseEntity.createSpiderAttributes());
 
-        registerRenderers();
+        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+            registerRenderers();
+        }
     }
 
-    @Environment(EnvType.CLIENT)
     static void registerRenderers() {
+        December.LOGGER.info(December.MOD_ID + ": Registering entity renderers");
         EntityRendererRegistry.register(BIB, BibEntityRenderer::new);
         EntityRendererRegistry.register(HASSE, HasseEntityRenderer::new);
     }
