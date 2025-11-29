@@ -5,5 +5,5 @@
   "result": {
     "id": "december:enderite_pickaxe"
   },
-  "template": "minecraft:netherite_upgrade_smithing_template"
+  "template": "december:enderite_upgrade"
 }

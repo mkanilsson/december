@@ -45,6 +45,11 @@ public class ModItems {
     public static final Item GLÖGG = register("glogg", Item::new,
             new Item.Settings().component(DataComponentTypes.CONSUMABLE, ConsumableComponents.drink().build()));
 
+    public static final Item ENDERITE_UPGRADE_SMITHING_TEMPLATE = register(
+            "enderite_upgrade",
+            Item::new,
+            new Item.Settings().rarity(Rarity.EPIC));
+
     public static final TagKey<Item> REPAIRS_ENDERITE_THINGS = TagKey.of(Registries.ITEM.getKey(),
             Identifier.of(December.MOD_ID, "repairs_enderite_things"));
 
@@ -152,6 +157,7 @@ public class ModItems {
             entries.add(PRESSED_MODERN_UNIT);
             entries.add(ELDER_GUARDIAN_STAR);
             entries.add(ENDERITE_INGOT);
+            entries.add(ENDERITE_UPGRADE_SMITHING_TEMPLATE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries -> {

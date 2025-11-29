@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": "december:enderite_ingot",
+    "S": "minecraft:end_stone"
+  },
+  "pattern": [
+    "SSS",
+    "SIS",
+    "SSS"
+  ],
+  "result": {
+    "count": 10,
+    "id": "december:enderite_upgrade"
+  }
+}

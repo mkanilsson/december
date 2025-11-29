@@ -21,6 +21,8 @@ public class ModENLanguageProvider extends FabricLanguageProvider {
         add(translationBuilder, ModItems.MODERN_UNIT, "Modern Unit");
         add(translationBuilder, ModItems.PRESSED_MODERN_UNIT, "Pressed Modern Unit");
 
+        add(translationBuilder, ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE, "Enderite Upgrade");
+
         add(translationBuilder, ModItems.ENDERITE_INGOT, "Enderite Ingot");
         add(translationBuilder, ModItems.ELDER_GUARDIAN_STAR, "Elder Guardian Star");
 

@@ -170,6 +170,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 conditionsFromItem(ModItems.ELDER_GUARDIAN_STAR))
                         .offerTo(exporter);
 
+                createShaped(RecipeCategory.MISC, ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE, 10)
+                        .pattern("SSS")
+                        .pattern("SIS")
+                        .pattern("SSS")
+                        .input('S', Items.END_STONE)
+                        .input('I', ModItems.ENDERITE_INGOT)
+                        .criterion(hasItem(Items.END_STONE), conditionsFromItem(Items.END_STONE))
+                        .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                        .criterion(hasItem(ModItems.ENDERITE_INGOT), conditionsFromItem(ModItems.ENDERITE_INGOT))
+                        .offerTo(exporter);
+
                 createEnderiteSmithingUpgrade(Items.NETHERITE_AXE, ModItems.ENDERITE_AXE, RecipeCategory.TOOLS);
                 createEnderiteSmithingUpgrade(Items.NETHERITE_SHOVEL, ModItems.ENDERITE_SHOVEL, RecipeCategory.TOOLS);
                 createEnderiteSmithingUpgrade(Items.NETHERITE_PICKAXE, ModItems.ENDERITE_PICKAXE, RecipeCategory.TOOLS);
@@ -187,7 +198,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             private void createEnderiteSmithingUpgrade(Item source, Item result, RecipeCategory category) {
                 SmithingTransformRecipeJsonBuilder
-                        .create(Ingredient.ofItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        .create(Ingredient.ofItem(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE),
                                 Ingredient.ofItem(source),
                                 Ingredient.ofItem(ModItems.ENDERITE_INGOT),
                                 category,
