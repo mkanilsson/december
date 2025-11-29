@@ -46,6 +46,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.LUSSEBULLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GINGER_BRED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GLÖGG, Models.GENERATED);
     }
 
     @Override

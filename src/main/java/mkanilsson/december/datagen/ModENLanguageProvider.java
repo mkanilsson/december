@@ -43,7 +43,9 @@ public class ModENLanguageProvider extends FabricLanguageProvider {
 
         add(translationBuilder, ModItems.GINGER_BRED, "Pepparkaka");
         add(translationBuilder, ModItems.LUSSEBULLE, "Lussebulle");
+        add(translationBuilder, ModItems.GLÖGG, "Glögg");
         add(translationBuilder, Items.ALLIUM, "Saffron");
+
     }
 
     private void add(TranslationBuilder builder, Item item, String text) {

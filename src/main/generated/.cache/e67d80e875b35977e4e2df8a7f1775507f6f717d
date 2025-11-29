@@ -12,6 +12,7 @@ c89e8025d3c3f514aa27e1829b392003dfc06ff8 assets/december/items/enderite_pickaxe.
 a9537428b443acdfd1ebafc9c674c427148bf9e3 assets/december/items/enderite_shovel.json
 e3cfc7bb16711df2a81ae97860be7726c945541d assets/december/items/enderite_sword.json
 3eb578fd9c2ba978bd6ac429a35003a94a72ccdf assets/december/items/ginger_bread.json
+84b8887f077ffbace3b1dfa58bfc4c7abbba9ae6 assets/december/items/glogg.json
 e4c8b11f9136140d336c391749f338fe834ee06d assets/december/items/lussebulle.json
 b76cad702b33b0385eddab44bd981569f217aa8b assets/december/items/modern_structure.json
 379142e31fbc1c768b9ca97982fc13ff3d32bf48 assets/december/items/modern_unit.json
@@ -73,6 +74,7 @@ a3bd2b8f9c71e91278825b7b12c3f2ad85a3725d assets/december/models/item/enderite_le
 414a387e51064cf7c9d490c896c4aea6aa737619 assets/december/models/item/enderite_shovel.json
 93f15e3b6bbb010d1492fad42503859e0180e119 assets/december/models/item/enderite_sword.json
 5aaf74921684dedca401e594d7128ee5bb37a56b assets/december/models/item/ginger_bread.json
+90166fe215367fa2719cc177788d07b89737cffd assets/december/models/item/glogg.json
 4fe779ce3160917c6b581003123258a086969275 assets/december/models/item/lussebulle.json
 b969f6b43cc233abe9cd3a6119dd8a429f1a7dec assets/december/models/item/modern_unit.json
 e45f1056c3203dc7e266fd75f26603393c85bf6e assets/december/models/item/pressed_modern_unit.json

@@ -4,6 +4,7 @@ f68d7d1b98aad8a2d4da5677a288a1ccba3656b3 data/december/advancement/recipes/comba
 b739517124ea1a5500e55b67442af0400397154c data/december/advancement/recipes/combat/enderite_helmet.json
 dfe9b1a887f57cbb8b5c481fa7de6cc967fd9e1d data/december/advancement/recipes/combat/enderite_leggings.json
 676387f786da8580df015eadff63f99844d8886c data/december/advancement/recipes/food/ginger_bread.json
+d2a549d09ab5d3091e1e3f442313f3566c40903c data/december/advancement/recipes/food/glogg.json
 8d8439465a17b7b6eb2c45a59ad81812d416fe5e data/december/advancement/recipes/food/lussebulle.json
 702fcbce74898554a836eb3d387081e9271c1b64 data/december/advancement/recipes/tools/dirt_shovel.json
 bc8580f3722a74e18d95e2df813a318cf3ffb4b5 data/december/advancement/recipes/tools/enderite_axe.json
@@ -23,5 +24,6 @@ ee7a3741043f682b7a9b91e3bf2e937c4add28a9 data/december/recipe/enderite_hoe.json
 1feb348aec4eb0515517d741c770336d4f1b1d45 data/december/recipe/enderite_shovel.json
 9d780c9c8e14944bdd1b4ba25a8b23812964be8d data/december/recipe/enderite_sword.json
 48991d1e666c7cedd78005db6a8b22a625604e2e data/december/recipe/ginger_bread.json
+cb6a1727a6edf4518e975b177b11ed39a88a58bd data/december/recipe/glogg.json
 045188ae1f3dac5de444a2ccd751dec0e10459ac data/december/recipe/lussebulle.json
 d5b1ae0ba7a947ea436ad1a878f3b8c48732c4aa data/december/recipe/modern_unit_from_smelting_modern_structure.json
