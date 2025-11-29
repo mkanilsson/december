@@ -8,6 +8,7 @@ import mkanilsson.december.datagen.ModRecipeProvider;
 import mkanilsson.december.datagen.ModRegistryDataGenerator;
 import mkanilsson.december.datagen.ModSVLanguageProvider;
 import mkanilsson.december.datagen.ModENLanguageProvider;
+import mkanilsson.december.datagen.ModEntityLootTableProvider;
 import mkanilsson.december.block.ModBlocks;
 import mkanilsson.december.entity.ModEntities;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -56,6 +57,7 @@ public class DecemberDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModRegistryDataGenerator::new);
         pack.addProvider(ModENLanguageProvider::new);
         pack.addProvider(ModSVLanguageProvider::new);
+        pack.addProvider(ModEntityLootTableProvider::new);
     }
 
     @Override

@@ -44,12 +44,13 @@ public class ModEntities {
         December.LOGGER.info(December.MOD_ID + ": Registering mod entities");
 
         FabricDefaultAttributeRegistry.register(BIB, BibEntity.createSpiderAttributes());
-
         FabricDefaultAttributeRegistry.register(HASSE, HasseEntity.createSpiderAttributes());
+
+        registerRenderers();
     }
 
     @Environment(EnvType.CLIENT)
-    static void RegisterRenderer() {
+    static void registerRenderers() {
         EntityRendererRegistry.register(BIB, BibEntityRenderer::new);
         EntityRendererRegistry.register(HASSE, HasseEntityRenderer::new);
     }
