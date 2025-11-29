@@ -3,6 +3,7 @@ package mkanilsson.december.item;
 import mkanilsson.december.December;
 import mkanilsson.december.entity.ModEntities;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
@@ -29,6 +30,9 @@ import java.util.function.Function;
 public class ModItems {
     public static final Item MODERN_UNIT = register("modern_unit", Item::new, new Item.Settings());
     public static final Item ENDERITE_INGOT = register("enderite_ingot", Item::new, new Item.Settings());
+
+    public static final Item GINGER_BRED = register("ginger_bred", Item::new, new Item.Settings().food(new FoodComponent(1, 1, true)));
+    public static final Item LUSSEBULLE = register("lussebulle", Item::new, new Item.Settings().food(new FoodComponent(1, 1, true)));
 
     public static final TagKey<Item> REPAIRS_ENDERITE_THINGS = TagKey.of(Registries.ITEM.getKey(),
             Identifier.of(December.MOD_ID, "repairs_enderite_things"));
@@ -157,6 +161,11 @@ public class ModItems {
             entries.add(ENDERITE_CHESTPLATE);
             entries.add(ENDERITE_LEGGINGS);
             entries.add(ENDERITE_BOOTS);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+            entries.add(GINGER_BRED);
+            entries.add(LUSSEBULLE);
         });
     }
 }

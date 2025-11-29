@@ -6,12 +6,13 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper.WrapperLookup;
 import mkanilsson.december.item.ModItems;
 import mkanilsson.december.block.ModBlocks;
 
-public class ModLanguageProvider extends FabricLanguageProvider {
-    public ModLanguageProvider(FabricDataOutput dataOutput, CompletableFuture<WrapperLookup> registryLookup) {
+public class ModENLanguageProvider extends FabricLanguageProvider {
+    public ModENLanguageProvider(FabricDataOutput dataOutput, CompletableFuture<WrapperLookup> registryLookup) {
         super(dataOutput, "en_us", registryLookup);
     }
 
@@ -38,6 +39,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 
         add(translationBuilder, ModItems.BIB_SPAWN_EGG, "Bib Spawn Egg");
         add(translationBuilder, ModItems.HASSE_SPAWN_EGG, "Hasse Spawn Egg");
+
+        add(translationBuilder, ModItems.GINGER_BRED, "Pepparkakor");
+        add(translationBuilder, ModItems.LUSSEBULLE, "Lussebulle");
+        add(translationBuilder, Items.ALLIUM, "Saffron");
     }
 
     private void add(TranslationBuilder builder, Item item, String text) {

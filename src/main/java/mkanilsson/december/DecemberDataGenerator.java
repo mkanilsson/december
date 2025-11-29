@@ -6,7 +6,8 @@ import mkanilsson.december.datagen.ModItemTagProvider;
 import mkanilsson.december.datagen.ModModelProvider;
 import mkanilsson.december.datagen.ModRecipeProvider;
 import mkanilsson.december.datagen.ModRegistryDataGenerator;
-import mkanilsson.december.datagen.ModLanguageProvider;
+import mkanilsson.december.datagen.ModSVLanguageProvider;
+import mkanilsson.december.datagen.ModENLanguageProvider;
 import mkanilsson.december.block.ModBlocks;
 import mkanilsson.december.entity.ModEntities;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -53,7 +54,8 @@ public class DecemberDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModItemTagProvider::new);
         pack.addProvider(ModRecipeProvider::new);
         pack.addProvider(ModRegistryDataGenerator::new);
-        pack.addProvider(ModLanguageProvider::new);
+        pack.addProvider(ModENLanguageProvider::new);
+        pack.addProvider(ModSVLanguageProvider::new);
     }
 
     @Override
@@ -121,6 +123,8 @@ class ModOreGeneration {
 class ModEntitySpawn {
     public static void addSpawns() {
         BiomeModifications.addSpawn(BiomeSelectors.foundInOverworld(), SpawnGroup.CREATURE, ModEntities.BIB, 500, 1, 1);
+        BiomeModifications.addSpawn(BiomeSelectors.foundInOverworld(), SpawnGroup.CREATURE, ModEntities.HASSE, 500, 1,
+                1);
 
         SpawnRestriction.register(ModEntities.BIB, SpawnLocationTypes.ON_GROUND,
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, HostileEntity::canSpawnIgnoreLightLevel);

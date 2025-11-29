@@ -42,6 +42,9 @@ public class ModModelProvider extends FabricModelProvider {
                 ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.ENDERITE_BOOTS, ModItems.ENDERITE_ARMOR_MATERIAL_KEY,
                 ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
+        itemModelGenerator.register(ModItems.LUSSEBULLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GINGER_BRED, Models.GENERATED);
     }
 
     @Override

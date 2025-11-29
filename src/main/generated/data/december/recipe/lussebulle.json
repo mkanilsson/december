@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:wheat",
+    "minecraft:sugar",
+    "minecraft:allium"
+  ],
+  "result": {
+    "count": 4,
+    "id": "december:lussebulle"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:cookie",
+    "minecraft:brown_dye"
+  ],
+  "result": {
+    "count": 4,
+    "id": "december:ginger_bred"
+  }
+}

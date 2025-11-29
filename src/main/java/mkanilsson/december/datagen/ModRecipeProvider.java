@@ -124,6 +124,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(Items.DIRT),
                                 conditionsFromItem(Items.DIRT))
                         .offerTo(exporter);
+
+                createShapeless(RecipeCategory.FOOD, ModItems.LUSSEBULLE, 4)
+                        .input(Items.WHEAT)
+                        .input(Items.SUGAR)
+                        .input(Items.ALLIUM)
+                        .criterion(hasItem(Items.WHEAT),
+                                conditionsFromItem(Items.SUGAR))
+                        .offerTo(exporter);
+
+                createShapeless(RecipeCategory.FOOD, ModItems.GINGER_BRED, 4)
+                        .input(Items.COOKIE)
+                        .input(Items.BROWN_DYE)
+                        .criterion(hasItem(Items.BROWN_DYE),
+                                conditionsFromItem(Items.COOKIE))
+                        .offerTo(exporter);
             }
         };
     }
