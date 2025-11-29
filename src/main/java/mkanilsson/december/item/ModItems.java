@@ -31,6 +31,8 @@ public class ModItems {
     public static final Item MODERN_UNIT = register("modern_unit", Item::new, new Item.Settings());
     public static final Item ENDERITE_INGOT = register("enderite_ingot", Item::new, new Item.Settings());
 
+    public static final Item PRESSED_MODERN_UNIT = register("pressed_modern_unit", Item::new, new Item.Settings());
+
     public static final Item GINGER_BRED = register("ginger_bred", Item::new, new Item.Settings().food(new FoodComponent(1, 1, true)));
     public static final Item LUSSEBULLE = register("lussebulle", Item::new, new Item.Settings().food(new FoodComponent(1, 1, true)));
 
@@ -138,6 +140,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(MODERN_UNIT);
+            entries.add(PRESSED_MODERN_UNIT);
             entries.add(ENDERITE_INGOT);
         });
 

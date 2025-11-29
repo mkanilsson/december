@@ -19,6 +19,7 @@ public class ModENLanguageProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         add(translationBuilder, ModItems.MODERN_UNIT, "Modern Unit");
+        add(translationBuilder, ModItems.PRESSED_MODERN_UNIT, "Pressed Modern Unit");
 
         add(translationBuilder, ModItems.ENDERITE_INGOT, "Enderite Ingot");
 
@@ -40,7 +41,7 @@ public class ModENLanguageProvider extends FabricLanguageProvider {
         add(translationBuilder, ModItems.BIB_SPAWN_EGG, "Bib Spawn Egg");
         add(translationBuilder, ModItems.HASSE_SPAWN_EGG, "Hasse Spawn Egg");
 
-        add(translationBuilder, ModItems.GINGER_BRED, "Pepparkakor");
+        add(translationBuilder, ModItems.GINGER_BRED, "Pepparkaka");
         add(translationBuilder, ModItems.LUSSEBULLE, "Lussebulle");
         add(translationBuilder, Items.ALLIUM, "Saffron");
     }

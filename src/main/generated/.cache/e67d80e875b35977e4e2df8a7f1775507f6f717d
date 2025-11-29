@@ -15,6 +15,7 @@ b3e0c586067cacd7f325faffcd02ac0b0a1e19c1 assets/december/items/ginger_bred.json
 e4c8b11f9136140d336c391749f338fe834ee06d assets/december/items/lussebulle.json
 b76cad702b33b0385eddab44bd981569f217aa8b assets/december/items/modern_structure.json
 379142e31fbc1c768b9ca97982fc13ff3d32bf48 assets/december/items/modern_unit.json
+4c72076a8f4b38ed2b8db50869acdfb9ae7b3de6 assets/december/items/pressed_modern_unit.json
 4104dcd125eadc13120e3c07fbf8f8d9c9e4968d assets/december/models/block/modern_structure.json
 fb4bd58a2734c9bd1ac05cc5f5a10ea662f1899e assets/december/models/item/dirt_shovel.json
 504c7367cfb980bdf08e6b4a0bdb16073a6357b6 assets/december/models/item/enderite_axe.json
@@ -74,3 +75,4 @@ a3bd2b8f9c71e91278825b7b12c3f2ad85a3725d assets/december/models/item/enderite_le
 e2fa2fd2437ecaa473c92aa76c5602a88d61abe0 assets/december/models/item/ginger_bred.json
 4fe779ce3160917c6b581003123258a086969275 assets/december/models/item/lussebulle.json
 b969f6b43cc233abe9cd3a6119dd8a429f1a7dec assets/december/models/item/modern_unit.json
+e45f1056c3203dc7e266fd75f26603393c85bf6e assets/december/models/item/pressed_modern_unit.json
