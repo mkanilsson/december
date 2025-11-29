@@ -45,6 +45,8 @@ public class ModItems {
     public static final Item GLÖGG = register("glogg", Item::new,
             new Item.Settings().component(DataComponentTypes.CONSUMABLE, ConsumableComponents.drink().build()));
 
+    public static final Item SAFFRON = Items.ALLIUM;
+
     public static final Item ENDERITE_UPGRADE_SMITHING_TEMPLATE = register(
             "enderite_upgrade",
             Item::new,

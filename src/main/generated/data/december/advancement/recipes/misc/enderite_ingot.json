@@ -11,6 +11,26 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_nether_star": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:nether_star"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_pressed_modern_unit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "december:pressed_modern_unit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "december:enderite_ingot"
@@ -21,7 +41,9 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_elder_guardian_star"
+      "has_pressed_modern_unit",
+      "has_elder_guardian_star",
+      "has_nether_star"
     ]
   ],
   "rewards": {

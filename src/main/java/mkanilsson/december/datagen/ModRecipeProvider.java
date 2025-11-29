@@ -40,39 +40,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("S")
                         .input('D', Items.DIRT)
                         .input('S', Items.STICK)
-                        .criterion(hasItem(Items.DIRT),
-                                conditionsFromItem(Items.DIRT))
+                        .criterion(hasItem(Items.DIRT), conditionsFromItem(Items.DIRT))
+                        .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                         .offerTo(exporter);
 
                 createShapeless(RecipeCategory.FOOD, ModItems.LUSSEBULLE, 4)
                         .input(Items.WHEAT)
                         .input(Items.SUGAR)
-                        .input(Items.ALLIUM)
-                        .criterion(hasItem(Items.WHEAT),
-                                conditionsFromItem(Items.SUGAR))
+                        .input(ModItems.SAFFRON)
+                        .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT))
+                        .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                        .criterion(hasItem(ModItems.SAFFRON), conditionsFromItem(ModItems.SAFFRON))
                         .offerTo(exporter);
 
                 createShapeless(RecipeCategory.FOOD, ModItems.GINGER_BRED, 4)
                         .input(Items.COOKIE)
                         .input(Items.BROWN_DYE)
-                        .criterion(hasItem(Items.BROWN_DYE),
-                                conditionsFromItem(Items.COOKIE))
+                        .criterion(hasItem(Items.BROWN_DYE), conditionsFromItem(Items.BROWN_DYE))
+                        .criterion(hasItem(Items.COOKIE), conditionsFromItem(Items.COOKIE))
                         .offerTo(exporter);
 
                 createShapeless(RecipeCategory.FOOD, ModItems.GLÖGG, 4)
                         .input(Items.WATER_BUCKET)
                         .input(Items.SUGAR)
                         .input(Items.MELON_SEEDS)
-                        .criterion(hasItem(Items.WATER_BUCKET),
-                                conditionsFromItem(Items.APPLE))
+                        .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                        .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                        .criterion(hasItem(Items.MELON_SEEDS), conditionsFromItem(Items.MELON_SEEDS))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.PRESSED_MODERN_UNIT)
                         .pattern("MM")
                         .pattern("MM")
                         .input('M', ModItems.MODERN_UNIT)
-                        .criterion(hasItem(ModItems.MODERN_UNIT),
-                                conditionsFromItem(ModItems.MODERN_UNIT))
+                        .criterion(hasItem(ModItems.MODERN_UNIT), conditionsFromItem(ModItems.MODERN_UNIT))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.ENDERITE_INGOT, 10)
@@ -82,8 +83,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('P', ModItems.PRESSED_MODERN_UNIT)
                         .input('E', ModItems.ELDER_GUARDIAN_STAR)
                         .input('N', Items.NETHER_STAR)
+                        .criterion(hasItem(ModItems.PRESSED_MODERN_UNIT),
+                                conditionsFromItem(ModItems.PRESSED_MODERN_UNIT))
                         .criterion(hasItem(ModItems.ELDER_GUARDIAN_STAR),
                                 conditionsFromItem(ModItems.ELDER_GUARDIAN_STAR))
+                        .criterion(hasItem(Items.NETHER_STAR), conditionsFromItem(Items.NETHER_STAR))
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE, 10)
