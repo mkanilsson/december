@@ -11,7 +11,7 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/mkanilsson/december"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT License",
 	"icon": "assets/december/icon.png",
 	"environment": "*",
 	"entrypoints": {
