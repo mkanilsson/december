@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_modern_unit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "december:modern_unit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "december:pressed_modern_unit"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_modern_unit"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "december:pressed_modern_unit"
+    ]
+  }
+}

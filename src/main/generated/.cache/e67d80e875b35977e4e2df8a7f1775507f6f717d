@@ -1,6 +1,7 @@
 // 1.21.10	-999999999-01-01T00:00:00	december/DecemberModModelProvider
 1608ce176f45130a0a0ec2e596d96b6d6ce9ba2f assets/december/blockstates/modern_structure.json
 0e8058518e13cb93f86c2cb1582a7df8d3886595 assets/december/items/dirt_shovel.json
+5575c93d8bca3aa66d0e51df8a29d80beff1058e assets/december/items/elder_guardian_star.json
 2f6bbcc6c8512d81d4ac0f48f873cd7231e5a7c8 assets/december/items/enderite_axe.json
 d8ce61f5529e37b4252ede230b4178ddf6cbd215 assets/december/items/enderite_boots.json
 98cd2ffbf2fd72bbde1b4db6c7efb59d42b0e442 assets/december/items/enderite_chestplate.json
@@ -19,6 +20,7 @@ b76cad702b33b0385eddab44bd981569f217aa8b assets/december/items/modern_structure.
 4c72076a8f4b38ed2b8db50869acdfb9ae7b3de6 assets/december/items/pressed_modern_unit.json
 4104dcd125eadc13120e3c07fbf8f8d9c9e4968d assets/december/models/block/modern_structure.json
 fb4bd58a2734c9bd1ac05cc5f5a10ea662f1899e assets/december/models/item/dirt_shovel.json
+27da452f4bb0c855f50eb82b8dca2c90a3912e40 assets/december/models/item/elder_guardian_star.json
 504c7367cfb980bdf08e6b4a0bdb16073a6357b6 assets/december/models/item/enderite_axe.json
 f7d21af17b760024606e05dbd3f483dedef645f2 assets/december/models/item/enderite_boots.json
 064525b62da3507d53ca289e6ac29958095f1a44 assets/december/models/item/enderite_boots_amethyst_trim.json

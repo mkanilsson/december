@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "december:elder_guardian_star",
+    "N": "minecraft:nether_star",
+    "P": "december:pressed_modern_unit"
+  },
+  "pattern": [
+    "PPP",
+    "EPN",
+    "PPP"
+  ],
+  "result": {
+    "count": 10,
+    "id": "december:enderite_ingot"
+  }
+}

@@ -25,6 +25,7 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 import java.util.Map;
 import java.util.function.Function;
@@ -34,6 +35,8 @@ public class ModItems {
     public static final Item ENDERITE_INGOT = register("enderite_ingot", Item::new, new Item.Settings());
 
     public static final Item PRESSED_MODERN_UNIT = register("pressed_modern_unit", Item::new, new Item.Settings());
+    public static final Item ELDER_GUARDIAN_STAR = register("elder_guardian_star", Item::new,
+            new Item.Settings().rarity(Rarity.RARE));
 
     public static final Item GINGER_BRED = register("ginger_bread", Item::new,
             new Item.Settings().food(new FoodComponent(1, 1, true)));
@@ -147,6 +150,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(MODERN_UNIT);
             entries.add(PRESSED_MODERN_UNIT);
+            entries.add(ELDER_GUARDIAN_STAR);
             entries.add(ENDERITE_INGOT);
         });
 

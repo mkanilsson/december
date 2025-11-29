@@ -147,6 +147,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(Items.WATER_BUCKET),
                                 conditionsFromItem(Items.APPLE))
                         .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.PRESSED_MODERN_UNIT)
+                        .pattern("MMM")
+                        .pattern("MMM")
+                        .pattern("MMM")
+                        .input('M', ModItems.MODERN_UNIT)
+                        .criterion(hasItem(ModItems.MODERN_UNIT),
+                                conditionsFromItem(ModItems.MODERN_UNIT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.ENDERITE_INGOT, 10)
+                        .pattern("PPP")
+                        .pattern("EPN")
+                        .pattern("PPP")
+                        .input('P', ModItems.PRESSED_MODERN_UNIT)
+                        .input('E', ModItems.ELDER_GUARDIAN_STAR)
+                        .input('N', Items.NETHER_STAR)
+                        .criterion(hasItem(ModItems.ELDER_GUARDIAN_STAR),
+                                conditionsFromItem(ModItems.ELDER_GUARDIAN_STAR))
+                        .offerTo(exporter);
             }
         };
     }
