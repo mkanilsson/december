@@ -9,7 +9,10 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
+import net.minecraft.data.recipe.SmithingTransformRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper.WrapperLookup;
 
@@ -166,6 +169,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.ELDER_GUARDIAN_STAR),
                                 conditionsFromItem(ModItems.ELDER_GUARDIAN_STAR))
                         .offerTo(exporter);
+
+                createEnderiteSmithingUpgrade(Items.NETHERITE_AXE, ModItems.ENDERITE_AXE, RecipeCategory.TOOLS);
+                createEnderiteSmithingUpgrade(Items.NETHERITE_SHOVEL, ModItems.ENDERITE_SHOVEL, RecipeCategory.TOOLS);
+                createEnderiteSmithingUpgrade(Items.NETHERITE_PICKAXE, ModItems.ENDERITE_PICKAXE, RecipeCategory.TOOLS);
+                createEnderiteSmithingUpgrade(Items.NETHERITE_HOE, ModItems.ENDERITE_HOE, RecipeCategory.TOOLS);
+
+                createEnderiteSmithingUpgrade(Items.NETHERITE_SWORD, ModItems.ENDERITE_SWORD, RecipeCategory.COMBAT);
+
+                createEnderiteSmithingUpgrade(Items.NETHERITE_HELMET, ModItems.ENDERITE_HELMET, RecipeCategory.COMBAT);
+                createEnderiteSmithingUpgrade(Items.NETHERITE_CHESTPLATE, ModItems.ENDERITE_CHESTPLATE,
+                        RecipeCategory.COMBAT);
+                createEnderiteSmithingUpgrade(Items.NETHERITE_LEGGINGS, ModItems.ENDERITE_LEGGINGS,
+                        RecipeCategory.COMBAT);
+                createEnderiteSmithingUpgrade(Items.NETHERITE_BOOTS, ModItems.ENDERITE_BOOTS, RecipeCategory.COMBAT);
+            }
+
+            private void createEnderiteSmithingUpgrade(Item source, Item result, RecipeCategory category) {
+                SmithingTransformRecipeJsonBuilder
+                        .create(Ingredient.ofItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                                Ingredient.ofItem(source),
+                                Ingredient.ofItem(ModItems.ENDERITE_INGOT),
+                                category,
+                                result)
+                        .criterion("has_enterite_ingot", this.conditionsFromItem(ModItems.ENDERITE_INGOT))
+                        .offerTo(this.exporter, getItemPath(result) + "_smithing");
+
             }
         };
     }

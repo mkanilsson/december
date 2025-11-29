@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "december:enderite_ingot",
+  "base": "minecraft:netherite_axe",
+  "result": {
+    "id": "december:enderite_axe"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}
