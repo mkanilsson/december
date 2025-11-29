@@ -2,6 +2,7 @@ package mkanilsson.december;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.entry.ItemEntry;
@@ -39,9 +40,9 @@ class LootTableInjector {
         });
 
         LootTableEvents.MODIFY.register((lootTableId, builder, source, wrapper) -> {
-            if (ModEntities.BIB.getLootTableKey().get().equals(lootTableId)) {
+            if (EntityType.ELDER_GUARDIAN.getLootTableKey().get().equals(lootTableId)) {
                 builder.pool(LootPool.builder().rolls(new ConstantLootNumberProvider(1))
-                        .with(ItemEntry.builder(ModItems.ENDERITE_INGOT)));
+                        .with(ItemEntry.builder(ModItems.ELDER_GUARDIAN_STAR)));
             }
         });
     }
