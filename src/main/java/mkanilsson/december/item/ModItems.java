@@ -1,6 +1,7 @@
 package mkanilsson.december.item;
 
 import mkanilsson.december.December;
+import mkanilsson.december.item.GloggItem;
 import mkanilsson.december.entity.ModEntities;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.type.FoodComponent;
@@ -33,8 +34,12 @@ public class ModItems {
 
     public static final Item PRESSED_MODERN_UNIT = register("pressed_modern_unit", Item::new, new Item.Settings());
 
-    public static final Item GINGER_BRED = register("ginger_bred", Item::new, new Item.Settings().food(new FoodComponent(1, 1, true)));
-    public static final Item LUSSEBULLE = register("lussebulle", Item::new, new Item.Settings().food(new FoodComponent(1, 1, true)));
+    public static final Item GINGER_BRED = register("ginger_bread", Item::new,
+            new Item.Settings().food(new FoodComponent(1, 1, true)));
+    public static final Item LUSSEBULLE = register("lussebulle", Item::new,
+            new Item.Settings().food(new FoodComponent(1, 1, true)));
+    // public static final Item GLÖGG = register("glögg", GloggItem::new, new
+    // Item.Settings().food(new FoodComponent(1, 1, true)));
 
     public static final TagKey<Item> REPAIRS_ENDERITE_THINGS = TagKey.of(Registries.ITEM.getKey(),
             Identifier.of(December.MOD_ID, "repairs_enderite_things"));

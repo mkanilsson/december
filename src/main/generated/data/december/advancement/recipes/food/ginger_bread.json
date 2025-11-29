@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "december:ginger_bred"
+        "recipe": "december:ginger_bread"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "december:ginger_bred"
+      "december:ginger_bread"
     ]
   }
 }
