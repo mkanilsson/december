@@ -1,6 +1,8 @@
 package mkanilsson.december.entity;
 
 import mkanilsson.december.December;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.client.render.entity.EntityRendererFactory;
@@ -39,12 +41,16 @@ public class ModEntities {
                     .maxTrackingRange(8).build(HASSE_KEY));
 
     public static void registerModEntites() {
-        December.LOGGER.info("Registering mod entities");
+        December.LOGGER.info(December.MOD_ID + ": Registering mod entities");
 
         FabricDefaultAttributeRegistry.register(BIB, BibEntity.createSpiderAttributes());
-        EntityRendererRegistry.register(BIB, BibEntityRenderer::new);
 
         FabricDefaultAttributeRegistry.register(HASSE, HasseEntity.createSpiderAttributes());
+    }
+
+    @Environment(EnvType.CLIENT)
+    static void RegisterRenderer() {
+        EntityRendererRegistry.register(BIB, BibEntityRenderer::new);
         EntityRendererRegistry.register(HASSE, HasseEntityRenderer::new);
     }
 }

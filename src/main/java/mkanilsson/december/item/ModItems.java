@@ -145,7 +145,7 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        December.LOGGER.info("Registering mod items");
+        December.LOGGER.info(December.MOD_ID + ": Registering mod items");
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(MODERN_UNIT);

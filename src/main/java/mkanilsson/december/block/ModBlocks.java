@@ -43,7 +43,7 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        December.LOGGER.info("Registering mod blocks");
+        December.LOGGER.info(December.MOD_ID + ": Registering mod blocks");
 
         // TODO: Figure out what group it should be
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
